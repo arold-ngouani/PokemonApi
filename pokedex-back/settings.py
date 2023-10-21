@@ -101,12 +101,8 @@ WSGI_APPLICATION = "pokedex-back.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "HOST": "localhost",
-        "NAME": "simcodb",
-        "USER": "simco_admin",
-        "PASSWORD": "admin123",
-        "PORT": 5432,
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -199,11 +195,6 @@ LOGOUT_URL = "rest_framework:logout"
 
 
 django_env_overrides.apply_to(globals())
-
-try:
-    from .settings_docker import *
-except:
-    pass
 
 try:
     from .local_settings import *

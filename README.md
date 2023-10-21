@@ -9,7 +9,7 @@ Attrapez-les tous ! ⚾
 ### Pré-requis
 
 - poetry installé
-- python 3.8
+- python 3.11
 
 ### Installation, initialisation et run
 
